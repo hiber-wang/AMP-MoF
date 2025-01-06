@@ -8,6 +8,7 @@ In recent years, it has become a hot topic in software engineering to predict Au
 
 ## Result
 ![Comparison image](result.png)
+
 Our model is trained on one 4090 GPU for 300 epochs, which takes about 35 hours.
 ## Usage
 ### Installation
