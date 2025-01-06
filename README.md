@@ -1,6 +1,6 @@
 # Misbehavior Prediction of Autonomous Driving System via Motion Features
 
-This project is the implementation of our Paper: [Misbehavior Prediction of Autonomous Driving System via Motion Features], which is submitted to **IEEE Transaction of Software Engineerring.** We proposed a SOTA model for ADS misbehavior Prediciton.
+This project is the implementation of our Paper: "Misbehavior Prediction of Autonomous Driving System via Motion Features", which is submitted to **IEEE Transaction of Software Engineerring.** We proposed a SOTA model for ADS misbehavior Prediciton.
 
 ![Comparison image](result.png)
 
