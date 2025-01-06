@@ -1,10 +1,10 @@
 # Misbehavior Prediction of Autonomous Driving System via Motion Features
 
-This project is the implementation of our Paper: [Misbehavior Prediction of Autonomous Driving System via Motion Features), which is submitted to **IEEE Transaction of Software Engineerring.** We proposed a SOTA model for ADS misbehavior Prediciton.
+This project is the implementation of our Paper: [Misbehavior Prediction of Autonomous Driving System via Motion Features], which is submitted to **IEEE Transaction of Software Engineerring.** We proposed a SOTA model for ADS misbehavior Prediciton.
 
 ![Comparison image](result.png)
 
-Our model is trained on four 4090 GPUs for 300 epochs, which takes about 35 hours.
+Our model is trained on one 4090 GPU for 300 epochs, which takes about 35 hours.
 ## Usage
 ### Installation
 
