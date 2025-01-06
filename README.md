@@ -22,81 +22,18 @@ For Cityscapes Dataset:
 
 ```bash
 python3 -m torch.distributed.launch --nproc_per_node=8 \
---master_port=4321 ./scripts/train.py \
---train_dataset CityTrainDataset \
---val_datasets CityValDataset \
+./scripts/train.py \
+--train_dataset path_of_train_dataset \
+--val_datasets path_of_val_dataset \
 --batch_size 8 \
 --num_gpu 8
 ```
 
-For KITTI Dataset:
+#### 😋Testing
 
-```bash
-python3 -m torch.distributed.launch --nproc_per_node=8 \
---master_port=4321 ./scripts/train.py \
---train_dataset KittiTrainDataset \
---val_datasets KittiValDataset \
---batch_size 8 \
---num_gpu 8
-```
-
-
-For DAVIS and Vimeo Dataset:
-
-```bash
-python3 -m torch.distributed.launch --nproc_per_node=8 \
---master_port=4321 ./scripts/train.py \
---train_dataset UCF101TrainDataset \
---val_datasets DavisValDataset VimeoValDataset \
---batch_size 8 \
---num_gpu 8
-```
-
-#### 🤔️Testing
-
-**<span id="directly_download_test_splits"> Directly download test splits of different datasets</span>**
-
-Download Cityscapes_test directly from [Google Drive](https://drive.google.com/file/d/1m5lfwGa6ugavZW9-UFrXNpQ0BWT7qn7X/view?usp=share_link).([百度网盘](https://pan.baidu.com/s/1KFxPC-zFi9LJwwed0PxEow) password: wk7k)
-
-Download KITTI_test directly from [Google Drive](https://drive.google.com/file/d/1_J5QxvozXiLoF3xca0uh9a6dEMVZJtWs/view?usp=drive_link).([百度网盘](https://pan.baidu.com/s/1pG31uHts3lV2ieouZZovcQ) password: e7da)
-
-Download DAVIS_test directly from [Google Drive](https://drive.google.com/file/d/10w1ox4ADtPdmBmYFhxHycFHcQg97PsK-/view?usp=drive_link).([百度网盘](https://pan.baidu.com/s/1ZydU6z5Y9DRQ1lBGQk8ynQ) password: mczk)
-
-Download Vimeo_test directly from [Google Drive](https://drive.google.com/file/d/1ERswpm1E_eeS10XnGv9qH75k3-y96VwU/view?usp=drive_link).([百度网盘](https://pan.baidu.com/s/1fsTQBhQHfrPMVhtSf-77TA) password: 0mjo)
-
-Run the following command to generate test results of DMVFN model. The `--val_datasets` can be `CityValDataset`, `KittiValDataset`, `DavisValDataset`, and `VimeoValDataset`. `--save_image` can be disabled.
-
-```bash
 python3 ./scripts/test.py \
---val_datasets CityValDataset [optional: KittiValDataset, DavisValDataset, VimeoValDataset] \
+--val_datasets path_of_test_dataset \
 --load_path path_of_pretrained_weights \
---save_image 
-```
-
-**Image results**
-
-We provide the image results of DMVFN on various datasets (Cityscapes, KITTI, DAVIS and Vimeo) in [百度网盘](https://pan.baidu.com/s/19BWu33raS49Wamw5iC96rA) (password: k7eb).
-
-We also provide the results of DMVFN (without routing) in [百度网盘](https://pan.baidu.com/s/1pW61ITp5MFLvyQCr44SkEg) (password: 8zo9).
-
-**Test the image results**
-
-Run the following command to directly test the image results.
-
-```bash
-python3 ./scripts/test_ssim_lpips.py
-```
-
-#### 😋Single test
-
-We provide a simple code to predict a `t+1` image with `t-1` and `t` images. Please run the following command:
-
-```bash
-python3 ./scripts/single_test.py \
---image_0_path ./images/sample_img_0.png \
---image_1_path ./images/sample_img_1.png \
---load_path path_of_pretrained_weights \
---output_dir pred.png
 ```
 
 ## Recommend
