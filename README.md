@@ -18,8 +18,6 @@ pip3 install -r requirements.txt
 
 #### 😆Training
 
-For Cityscapes Dataset:
-
 ```bash
 python3 -m torch.distributed.launch --nproc_per_node=8 \
 ./scripts/train.py \
@@ -31,6 +29,7 @@ python3 -m torch.distributed.launch --nproc_per_node=8 \
 
 #### 😋Testing
 
+```bash
 python3 ./scripts/test.py \
 --val_datasets path_of_test_dataset \
 --load_path path_of_pretrained_weights \
@@ -39,6 +38,6 @@ python3 ./scripts/test.py \
 ## Recommend
 We sincerely recommend some related papers:
 
-ECCV22 - [Real-Time Intermediate Flow Estimation for Video Frame Interpolation](https://github.com/megvii-research/ECCV2022-RIFE)
+ICSE20 - [Misbehaviour Prediction for Autonomous Driving Systems](https://github.com/testingautomated-usi/selforacle)
 
-CVPR22 - [Optimizing Video Prediction via Video Frame Interpolation](https://github.com/YueWuHKUST/CVPR2022-Optimizing-Video-Prediction-via-Video-Frame-Interpolation)
+ASE22 - [ThirdEye: Attention Maps for Safe Autonomous Driving Systems](https://github.com/tsigalko18/ase22)
