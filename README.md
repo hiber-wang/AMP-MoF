@@ -24,20 +24,34 @@ pip3 install -r requirements.txt
 #### 😆Training
 
 ```bash
-python3 -m torch.distributed.launch --nproc_per_node=8 \
-./scripts/train.py \
---train_dataset path_of_train_dataset \
---val_datasets path_of_val_dataset \
---batch_size 8 \
---num_gpu 8
+python3 -W ignore main.py --train \
+--pretrain --cal_center \
+--agent $agent \
+ --oracle $oracle \
+--R $R \
+ --abnormal_end $abnormal_end \
+--num_frames $num_frames 
+```
+
+#### 😋Fitting Gamma distribution
+```bash
+python3 -W ignore main.py --cal_threashold \
+--agent $agent \
+--oracle $oracle \
+--R $R \
+--abnormal_end $abnormal_end \
+--num_frames $num_frames
 ```
 
 #### 😋Testing
 
 ```bash
-python3 ./scripts/test.py \
---val_datasets path_of_test_dataset \
---load_path path_of_pretrained_weights \
+python3 -W ignore main.py --test \
+--agent $agent \
+--oracle $oracle \
+--R $R \
+--abnormal_end $abnormal_end \
+--num_frames $num_frames
 ```
 
 ## Recommend
