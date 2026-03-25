@@ -9,7 +9,7 @@ In recent years, it has become a hot topic in software engineering to predict Au
 ## Result
 ![Comparison image](result.png)
 
-Our model is trained on one 4080 GPU for 300 epochs, which takes about 35 hours.
+Our model is trained on one 4080 GPU for 200 epochs, which takes about 35 hours.
 ## Usage
 ### Installation
 
