@@ -27,9 +27,9 @@ pip3 install -r requirements.txt
 python3 -W ignore main.py --train \
 --pretrain --cal_center \
 --agent $agent \
- --oracle $oracle \
+--oracle $oracle \
 --R $R \
- --abnormal_end $abnormal_end \
+--abnormal_end $abnormal_end \
 --num_frames $num_frames 
 ```
 
