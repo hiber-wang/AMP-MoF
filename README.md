@@ -45,6 +45,15 @@ python3 -W ignore main.py --cal_threshold \
 
 #### Testing
 
+> **Note:** Before running the test, manually switch the threshold to match
+> the desired setup:
+>
+> - **Self-oracle** vs. **ThirdEyes**
+> - False positive rate (FPR) of **0.05** or **0.01**
+>
+> Update the threshold value in the corresponding code before
+> executing the command below.
+
 ```bash
 python3 -W ignore main.py --test \
     --agent "$AGENT" \
