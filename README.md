@@ -21,37 +21,37 @@ pip3 install -r requirements.txt
 
 ### Run
 
-#### 😆Training
+#### Training
 
 ```bash
-python3 -W ignore main.py --train \
---pretrain --cal_center \
---agent $agent \
---oracle $oracle \
---R $R \
---abnormal_end $abnormal_end \
---num_frames $num_frames 
+python3 -W ignore main.py --train --pretrain --cal_center \
+    --agent "$AGENT" \
+    --oracle "$ORACLE" \
+    --R "$R" \
+    --abnormal_end "$ABNORMAL_END" \
+    --num_frames "$NUM_FRAMES"
 ```
 
-#### 😋Fitting Gamma distribution
+#### Fitting gamma distribution
+
 ```bash
-python3 -W ignore main.py --cal_threashold \
---agent $agent \
---oracle $oracle \
---R $R \
---abnormal_end $abnormal_end \
---num_frames $num_frames
+python3 -W ignore main.py --cal_threshold \
+    --agent "$AGENT" \
+    --oracle "$ORACLE" \
+    --R "$R" \
+    --abnormal_end "$ABNORMAL_END" \
+    --num_frames "$NUM_FRAMES"
 ```
 
-#### 😋Testing
+#### Testing
 
 ```bash
 python3 -W ignore main.py --test \
---agent $agent \
---oracle $oracle \
---R $R \
---abnormal_end $abnormal_end \
---num_frames $num_frames
+    --agent "$AGENT" \
+    --oracle "$ORACLE" \
+    --R "$R" \
+    --abnormal_end "$ABNORMAL_END" \
+    --num_frames "$NUM_FRAMES"
 ```
 
 ## Recommend
