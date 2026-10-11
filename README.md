@@ -19,6 +19,9 @@ cd AMP-MoF
 pip3 install -r requirements.txt
 ```
 
+### Data
+下载地址：[Data](https://pan.baidu.com/s/1eQ_qg2uqkJNGMEOZ3J8ulw?pwd=1234)
+
 ### Run
 
 #### Training
